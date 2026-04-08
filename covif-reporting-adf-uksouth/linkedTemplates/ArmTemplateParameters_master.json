@@ -1,0 +1,69 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "covif-reporting-adf-uksouth"
+		},
+		"ls_covidreporting1233321_adls_accountKey": {
+			"value": ""
+		},
+		"ls_covidreportingblob3290_connectionString": {
+			"value": ""
+		},
+		"ls_databricks_covid_reporting_accessToken": {
+			"value": ""
+		},
+		"ls_hdi_covid_cluster_clusterPassword": {
+			"value": ""
+		},
+		"ls_hdi_covid_cluster_clusterSshPassword": {
+			"value": ""
+		},
+		"ls_new_sql_covid_report_password": {
+			"value": ""
+		},
+		"ls_sql_covid_data_password": {
+			"value": ""
+		},
+		"ls_covidreporting1233321_adls_properties_typeProperties_url": {
+			"value": "https://covidreporting1233321.dfs.core.windows.net/"
+		},
+		"ls_hdi_covid_cluster_properties_typeProperties_hostSubscriptionId": {
+			"value": "d69bf492-510f-4750-95fe-7a897a9bb7f6"
+		},
+		"ls_hdi_covid_cluster_properties_typeProperties_clusterResourceGroup": {
+			"value": "covid-reporting-rg"
+		},
+		"ls_http_opendata_ecdc_covid19_properties_typeProperties_url": {
+			"value": "@{linkedService().sourceBaseURL}"
+		},
+		"ls_new_sql_covid_report_properties_typeProperties_server": {
+			"value": "covid-server0921.database.windows.net"
+		},
+		"ls_new_sql_covid_report_properties_typeProperties_database": {
+			"value": "covid-db"
+		},
+		"ls_new_sql_covid_report_properties_typeProperties_userName": {
+			"value": "adm"
+		},
+		"ls_sql_covid_data_properties_typeProperties_server": {
+			"value": "covid-server0921.database.windows.net"
+		},
+		"ls_sql_covid_data_properties_typeProperties_database": {
+			"value": "covid-db"
+		},
+		"ls_sql_covid_data_properties_typeProperties_userName": {
+			"value": "adm"
+		},
+		"tr_population_data_arrived_properties_typeProperties_scope": {
+			"value": "/subscriptions/d69bf492-510f-4750-95fe-7a897a9bb7f6/resourceGroups/covid-reporting-rg/providers/Microsoft.Storage/storageAccounts/covidreportingblob3290"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
