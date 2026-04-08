@@ -1,0 +1,121 @@
+{
+	"name": "pl_ecdc_data_ingest_to_sql_table",
+	"properties": {
+		"activities": [
+			{
+				"name": "IngestEcdcData",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "pl_ingest_ECDC_data",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "process_cases_and_deaths",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "IngestEcdcData",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "pl_process_cases_and_deaths_data",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "process_hospital_admissions",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "IngestEcdcData",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "pl_process_hospital_admissions_data",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "sqlize_cases_and_deaths",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "process_cases_and_deaths",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "pl_sqlize_cases_and_deaths_data",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "sqlize_hospital_admissions_daily",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "process_hospital_admissions",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "pl_sqlize_hospital_admissions_daily",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			}
+		],
+		"folder": {
+			"name": "Execute"
+		},
+		"annotations": [],
+		"lastPublishTime": "2026-03-11T16:18:24Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
