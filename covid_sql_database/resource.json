@@ -1,0 +1,39 @@
+{
+    "apiVersion": "2024-11-01-preview",
+    "id": "/subscriptions/d69bf492-510f-4750-95fe-7a897a9bb7f6/resourceGroups/covid-reporting-rg/providers/Microsoft.Sql/servers/covid-server0921/databases/covid-db",
+    "name": "covid-db",
+    "type": "microsoft.sql/servers/databases",
+    "sku": {
+        "name": "Basic",
+        "tier": "Basic",
+        "capacity": 5
+    },
+    "kind": "v12.0,user",
+    "location": "uksouth",
+    "tags": {},
+    "properties": {
+        "collation": "SQL_Latin1_General_CP1_CI_AS",
+        "maxSizeBytes": 2147483648,
+        "status": "Online",
+        "databaseId": "6ff40821-48f2-486f-9c40-f6a143c7f7a6",
+        "creationDate": "2026-02-13T12:57:38.963Z",
+        "currentServiceObjectiveName": "Basic",
+        "requestedServiceObjectiveName": "Basic",
+        "defaultSecondaryLocation": "ukwest",
+        "catalogCollation": "SQL_Latin1_General_CP1_CI_AS",
+        "zoneRedundant": false,
+        "earliestRestoreDate": "2026-03-31T21:55:10.1128428Z",
+        "readScale": "Disabled",
+        "currentSku": {
+            "name": "Basic",
+            "tier": "Basic",
+            "capacity": 5
+        },
+        "currentBackupStorageRedundancy": "Local",
+        "requestedBackupStorageRedundancy": "Local",
+        "maintenanceConfigurationId": "/subscriptions/d69bf492-510f-4750-95fe-7a897a9bb7f6/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_Default",
+        "isLedgerOn": false,
+        "isInfraEncryptionEnabled": false,
+        "availabilityZone": "NoPreference"
+    }
+}

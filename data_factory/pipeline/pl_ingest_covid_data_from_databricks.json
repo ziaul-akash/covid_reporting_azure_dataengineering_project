@@ -1,0 +1,33 @@
+{
+	"name": "pl_ingest_covid_data_from_databricks",
+	"properties": {
+		"activities": [
+			{
+				"name": "TransformedCovidData",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/covid-project/transformation/transform_population_data"
+				},
+				"linkedServiceName": {
+					"referenceName": "ls_databricks_covid_reporting",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"folder": {
+			"name": "ingest"
+		},
+		"annotations": [],
+		"lastPublishTime": "2026-03-11T12:55:24Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

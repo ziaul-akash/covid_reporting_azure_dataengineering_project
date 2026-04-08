@@ -1,0 +1,8 @@
+﻿NAME,TYPE,LOCATION,RESOURCE LINK
+"covid-db (covid-server0921/covid-db)","SQL database","UK South","https://portal.azure.com#resource/subscriptions/d69bf492-510f-4750-95fe-7a897a9bb7f6/resourceGroups/covid-reporting-rg/providers/Microsoft.Sql/servers/covid-server0921/databases/covid-db"
+"covid-hdi-identity","Managed Identity","UK South","https://portal.azure.com#resource/subscriptions/d69bf492-510f-4750-95fe-7a897a9bb7f6/resourceGroups/covid-reporting-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/covid-hdi-identity"
+"covid-reporting-ws","Log Analytics workspace","UK South","https://portal.azure.com#resource/subscriptions/d69bf492-510f-4750-95fe-7a897a9bb7f6/resourceGroups/covid-reporting-rg/providers/Microsoft.OperationalInsights/workspaces/covid-reporting-ws"
+"covid-server0921","SQL server","UK South","https://portal.azure.com#resource/subscriptions/d69bf492-510f-4750-95fe-7a897a9bb7f6/resourceGroups/covid-reporting-rg/providers/Microsoft.Sql/servers/covid-server0921"
+"covidreporting1233321","Storage account","UK South","https://portal.azure.com#resource/subscriptions/d69bf492-510f-4750-95fe-7a897a9bb7f6/resourceGroups/covid-reporting-rg/providers/Microsoft.Storage/storageAccounts/covidreporting1233321"
+"covidreportingblob3290","Storage account","UK South","https://portal.azure.com#resource/subscriptions/d69bf492-510f-4750-95fe-7a897a9bb7f6/resourceGroups/covid-reporting-rg/providers/Microsoft.Storage/storageAccounts/covidreportingblob3290"
+"covif-reporting-adf-uksouth","Data factory (V2)","UK South","https://portal.azure.com#resource/subscriptions/d69bf492-510f-4750-95fe-7a897a9bb7f6/resourceGroups/covid-reporting-rg/providers/Microsoft.DataFactory/factories/covif-reporting-adf-uksouth"

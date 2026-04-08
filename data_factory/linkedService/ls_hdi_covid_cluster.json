@@ -1,0 +1,30 @@
+{
+	"name": "ls_hdi_covid_cluster",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "HDInsightOnDemand",
+		"typeProperties": {
+			"clusterType": "hadoop",
+			"clusterSize": 4,
+			"clusterNamePrefix": "",
+			"timeToLive": "00:15:00",
+			"version": "4.0",
+			"hostSubscriptionId": "d69bf492-510f-4750-95fe-7a897a9bb7f6",
+			"clusterResourceGroup": "covid-reporting-rg",
+			"linkedServiceName": {
+				"referenceName": "ls_covidreportingblob3290",
+				"type": "LinkedServiceReference"
+			},
+			"additionalLinkedServiceNames": [],
+			"headNodeSize": "",
+			"dataNodeSize": "",
+			"zookeeperNodeSize": "",
+			"clusterResourceGroupAuthType": "UserAssignedManagedIdentity",
+			"credential": {
+				"referenceName": "hdi_cluster_credential_for_pipeline",
+				"type": "CredentialReference"
+			}
+		}
+	}
+}

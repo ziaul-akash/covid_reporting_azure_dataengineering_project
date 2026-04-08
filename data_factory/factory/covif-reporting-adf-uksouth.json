@@ -1,0 +1,15 @@
+{
+	"name": "covif-reporting-adf-uksouth",
+	"location": "uksouth",
+	"identity": {
+		"type": "SystemAssigned,UserAssigned",
+		"principalId": "a3743799-ceda-4db5-833f-91844e54aa98",
+		"tenantId": "42eee4e2-6bb8-4a9a-8950-86f7a07ce4d0",
+		"userAssignedIdentities": {
+			"/subscriptions/d69bf492-510f-4750-95fe-7a897a9bb7f6/resourcegroups/covid-reporting-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/covid-hdi-identity": {
+				"clientId": "951aa67d-edb7-4d08-866e-d61c756fe8f6",
+				"principalId": "95e5f9db-21b5-41c1-b64b-82fb5896815c"
+			}
+		}
+	}
+}
